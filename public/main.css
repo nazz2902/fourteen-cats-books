@@ -1,0 +1,84 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Headings */
+h1,
+h2 {
+  font-family: "Merriweather", serif; /* A classy serif font */
+  color: #2c3e50; /* Darker color for more elegance */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem; /* Larger size for emphasis */
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #34495e; /* Slightly lighter than h1 */
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* Paragraph and List */
+p,
+li {
+  font-family: "Roboto", sans-serif; /* Clean and modern font */
+  font-size: 1.1rem;
+  color: #7f8c8d; /* Softer text color for easy reading */
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+a:link {
+  color: #e67e22; /* Elegant orange hue */
+}
+
+a:visited {
+  color: #e74c3c; /* A rich red for visited links */
+}
+
+a:hover {
+  color: #fff; /* White text for contrast */
+  background-color: #e67e22; /* Warm orange background */
+  border-radius: 5px; /* Slight border-radius for a smoother appearance */
+}
+
+a:active {
+  color: #2980b9; /* Blue when active */
+  background-color: #f39c12; /* Subtle yellow background */
+  transform: scale(1.05); /* Slight zoom effect on active state */
+}
+
+/* Add some spacing to the page */
+section {
+  margin-bottom: 30px;
+}
