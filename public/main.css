@@ -8,10 +8,25 @@
 /* Body */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f7f7f7;
+  background: linear-gradient(to bottom right, #fdfbfb, #ebedee);
   color: #333;
   line-height: 1.6;
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container */
+body > div {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
 }
 
 /* Headings */
@@ -21,7 +36,7 @@ h2 {
   color: #2c3e50; /* Darker color for more elegance */
   font-weight: 700;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Add space below headings */
 }
 
 h1 {
@@ -33,52 +48,78 @@ h2 {
   font-size: 1.8rem;
   color: #34495e; /* Slightly lighter than h1 */
   font-style: italic;
-  margin-bottom: 10px;
+  margin-bottom: 15px; /* Adjust gap for h2 */
 }
 
-/* Paragraph and List */
-p,
-li {
+p {
   font-family: "Roboto", sans-serif; /* Clean and modern font */
   font-size: 1.1rem;
-  color: #7f8c8d; /* Softer text color for easy reading */
+  color: #7f8c8d;
   margin-bottom: 15px;
   line-height: 1.8;
 }
 
 ul {
   margin-left: 20px;
+  margin-top: 20px; /* Add space above lists */
+  margin-bottom: 20px; /* Add space below lists */
 }
 
+li {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 10px; /* Add spacing between list items */
+  line-height: 1.6;
+}
 /* Links */
 a {
   text-decoration: none;
   font-weight: bold;
-  padding: 5px 10px;
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #e67e22;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
 a:link {
-  color: #e67e22; /* Elegant orange hue */
+  color: #fff; /* Default white text */
 }
 
 a:visited {
-  color: #e74c3c; /* A rich red for visited links */
+  background-color: #d35400; /* Slightly darker for visited links */
 }
 
 a:hover {
-  color: #fff; /* White text for contrast */
-  background-color: #e67e22; /* Warm orange background */
-  border-radius: 5px; /* Slight border-radius for a smoother appearance */
+  background-color: #c0392b;
+  transform: translateY(-2px); /* Slight hover effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 a:active {
-  color: #2980b9; /* Blue when active */
-  background-color: #f39c12; /* Subtle yellow background */
-  transform: scale(1.05); /* Slight zoom effect on active state */
+  background-color: #9b59b6;
+  transform: scale(0.98); /* Slight click effect */
 }
 
-/* Add some spacing to the page */
+/* Additional Styling for Sections */
+body > div p a {
+  display: block;
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+/* Ensure all sections have some spacing */
 section {
   margin-bottom: 30px;
+}
+
+/* Additional Layout Adjustments */
+h1 + p,
+h2 + p,
+h1 + ul,
+h2 + ul {
+  margin-top: 20px; /* Add spacing between headings and subsequent paragraphs/lists */
 }
