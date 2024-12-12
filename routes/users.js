@@ -20,7 +20,7 @@ router.get("/register", function (req, res, next) {
   }); // Pass an empty errors array initially
 });
 
-// POST route for handling user registration with enhanced validation
+// POST route for handling user registration
 router.post(
   "/registered",
   [
@@ -40,7 +40,6 @@ router.post(
     }
 
     // Proceed with registration logic if no errors
-    //const { username, first_name, last_name, email, password } = req.body;
     const username = req.sanitize(req.body.username);
     const first_name = req.sanitize(req.body.first_name);
     const last_name = req.sanitize(req.body.last_name);
@@ -89,7 +88,6 @@ router.get("/login", function (req, res, next) {
 });
 
 router.post("/loggedin", function (req, res, next) {
-  //const { username, password } = req.body;
   const username = req.sanitize(req.body.username);
   const password = req.sanitize(req.body.password);
   req.session.userId = username;
