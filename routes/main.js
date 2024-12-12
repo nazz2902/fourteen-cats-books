@@ -6,7 +6,7 @@ const request = require("request");
 // Middleware to redirect to login page if the user is not logged in
 const redirectLogin = (req, res, next) => {
   if (!req.session.userId) {
-    res.redirect("./login"); // Redirect to the login page if not logged in
+    res.redirect("/users/login"); // Redirect to the login page if not logged in
   } else {
     next(); // Proceed to the next middleware or route
   }

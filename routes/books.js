@@ -31,7 +31,7 @@ router.get("/search_result", function (req, res, next) {
 });
 
 // Route to list all books (requires login)
-router.get("/list", redirectLogin, function (req, res, next) {
+router.get("/list", function (req, res, next) {
   // SQL query to fetch all books
   let sqlquery = "SELECT * FROM books";
 
@@ -45,12 +45,12 @@ router.get("/list", redirectLogin, function (req, res, next) {
 });
 
 // Route to render the "Add Book" form (requires login)
-router.get("/addbook", redirectLogin, function (req, res, next) {
+router.get("/addbook", function (req, res, next) {
   res.render("addbook.ejs"); // Render the add book form
 });
 
 // Route to handle adding a new book to the database (requires login)
-router.post("/bookadded", redirectLogin, function (req, res, next) {
+router.post("/bookadded", function (req, res, next) {
   // SQL query to insert a new book record
   let sqlquery = "INSERT INTO books (name, price) VALUES (?,?)";
 
