@@ -40,9 +40,9 @@ app.use(
 // Define the database connection
 const db = mysql.createConnection({
   host: "localhost",
-  user: "bettys_books_app",
+  user: "fc_books_app",
   password: "qwertyuiop",
-  database: "bettys_books",
+  database: "fc_books",
 });
 // Connect to the database
 db.connect((err) => {
@@ -67,6 +67,10 @@ app.use("/users", usersRoutes);
 // Load the route handlers for /books
 const booksRoutes = require("./routes/books");
 app.use("/books", booksRoutes);
+
+// load the route handlers for books api
+const apiRoutes = require("./routes/api");
+app.use("/api", apiRoutes);
 
 // Start the web app listening
 app.listen(port, () => console.log(`Node app listening on port ${port}!`));
