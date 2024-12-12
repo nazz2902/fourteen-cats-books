@@ -59,19 +59,58 @@ p {
   line-height: 1.8;
 }
 
+/* List Styling */
 ul {
-  margin-left: 20px;
-  margin-top: 20px; /* Add space above lists */
-  margin-bottom: 20px; /* Add space below lists */
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Reset padding */
+  margin: 20px 0; /* Space above and below the list */
 }
 
 li {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.1rem;
-  color: #7f8c8d;
-  margin-bottom: 10px; /* Add spacing between list items */
-  line-height: 1.6;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border: 1px solid #ddd; /* Subtle border for structure */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Space inside each list item */
+  margin-bottom: 15px; /* Space between list items */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
+
+li:hover {
+  background-color: #f1f1f1; /* Slightly darker on hover */
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Enhance shadow on hover */
+}
+
+/* Text within the list items */
+li strong {
+  display: inline-block;
+  width: 100px; /* Fixed width for alignment */
+  font-weight: 700; /* Bold for emphasis */
+  color: #34495e; /* Elegant darker color */
+}
+
+li br {
+  display: none; /* Remove extra line breaks for cleaner spacing */
+}
+
+li span {
+  display: block; /* Stack content neatly */
+  margin: 5px 0; /* Space between lines */
+  color: #7f8c8d; /* Subtle secondary text color */
+  font-size: 1rem; /* Adjust font size for readability */
+}
+
+/* Adjust for small screens */
+@media (max-width: 600px) {
+  li {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+  li strong {
+    width: auto; /* Remove fixed width for alignment */
+  }
+}
+
 /* Links */
 a {
   text-decoration: none;
